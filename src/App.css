@@ -12,3 +12,16 @@ body {
   /* font-family: "Foldit", sans-serif; */
   font-family: "Playfair Display", serif;
 }
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
