@@ -11,9 +11,22 @@
 body {
   /* font-family: "Foldit", sans-serif; */
   font-family: "Playfair Display", serif;
+  overflow-x: hidden;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul li {
@@ -24,4 +37,23 @@ button {
   outline: none;
   border: none;
   background: none;
+}
+
+.fontxs {
+  font-size: 0.75rem;
+}
+.fontsm {
+  font-size: 0.875rem;
+}
+.fontmd {
+  font-size: 1rem;
+}
+.fontlg {
+  font-size: 1.25rem;
+}
+.fontxl {
+  font-size: 2rem;
+}
+.fontxxl {
+  font-size: 5rem;
 }
