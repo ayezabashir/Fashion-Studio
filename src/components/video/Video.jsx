@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import video from '../../../public/video/girlvideo.mp4'
+import video from '/video/girlvideo.mp4'
 const VideoContainer = styled.section`
         width:100%;
         height:100vh;
@@ -51,7 +51,19 @@ const Video = () => {
             <DarkEffect />
             <Title>
                 <div>
-                    <h1 className="fontxxl">Fashion Studio</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">F</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">a</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">s</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">h</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">i</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">o</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">n</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">S</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">t</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">u</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">d</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">i</h1>
+                    <h1 data-scroll data-scroll-speed="4" className="fontxxl">o</h1>
                 </div>
                 <h2 className="fontlg">Fashion, Beauty, Culture</h2>
             </Title>
