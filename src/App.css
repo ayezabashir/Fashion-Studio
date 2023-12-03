@@ -59,3 +59,12 @@ button {
 .fontxxl {
   font-size: 5rem;
 }
+
+.hidden {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.show {
+  display: inline;
+  transition: all 0.5s ease-in-out;
+}
