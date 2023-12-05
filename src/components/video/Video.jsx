@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import video from '/video/girlvideo.mp4'
+import { motion } from 'framer-motion'
+
 const VideoContainer = styled.section`
         width:100%;
         height:100vh;
@@ -22,7 +24,7 @@ const DarkEffect = styled.div`
         background-color: rgba(32,32,32,0.6);
 `
 
-const Title = styled.div`
+const Title = styled(motion.div)`
         display:flex;
         flex-direction:column;
         justify-content:center;
@@ -45,26 +47,47 @@ const Title = styled.div`
             text-shadow:1px 1px 1px black;
         }
 `
+const container = {
+    hidden: {
+        opacity: 0,
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 2,
+            staggerChildren: 0.3,
+        }
+    }
+}
+
+const item = {
+    hidden: {
+        opacity: 0,
+    },
+    show: {
+        opacity: 1,
+    }
+}
 
 const Video = () => {
     return (
         <VideoContainer>
             <DarkEffect />
-            <Title>
+            <Title variants={container} initial="hidden" animate="show" >
                 <div>
-                    <h1 data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">F</h1>
-                    <h1 data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">a</h1>
-                    <h1 data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">s</h1>
-                    <h1 data-scroll data-scroll-delay='0.04' data-scroll-speed="4" className="fontxxl">h</h1>
-                    <h1 data-scroll data-scroll-delay='0.03' data-scroll-speed="4" className="fontxxl">i</h1>
-                    <h1 data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">o</h1>
-                    <h1 data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">n&nbsp;</h1>
-                    <h1 data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">S</h1>
-                    <h1 data-scroll data-scroll-delay='0.04' data-scroll-speed="4" className="fontxxl">t</h1>
-                    <h1 data-scroll data-scroll-delay='0.03' data-scroll-speed="4" className="fontxxl">u</h1>
-                    <h1 data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">d</h1>
-                    <h1 data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">i</h1>
-                    <h1 data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">o</h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">F</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">a</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">s</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.04' data-scroll-speed="4" className="fontxxl">h</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.03' data-scroll-speed="4" className="fontxxl">i</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">o</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">n&nbsp;</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">S</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.04' data-scroll-speed="4" className="fontxxl">t</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.03' data-scroll-speed="4" className="fontxxl">u</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">d</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">i</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">o</motion.h1>
                 </div>
                 <h2 data-scroll data-scroll-delay='0.04' data-scroll-speed="2" className="fontlg">Fashion, Beauty, Culture</h2>
             </Title>
