@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Video from "../../components/video/Video"
 import Logo from "../../components/logo/Logo"
+import NavBar from "../../components/navbar/NavBar"
 
 const Section = styled.section`
         position:relative;
@@ -13,7 +14,7 @@ const Home = () => {
         <Section>
             <Video />
             <Logo />
-            <h1>NavBar</h1>
+            <NavBar />
         </Section>
     )
 }
