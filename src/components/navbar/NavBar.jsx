@@ -1,7 +1,8 @@
 import { useState } from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-const NavbarContainer = styled.div`
+const NavbarContainer = styled(motion.div)`
         position:absolute;
         top:${props => props.menu ? '0' : `-80px`};
         display:flex;
@@ -11,7 +12,7 @@ const NavbarContainer = styled.div`
         z-index:6;
         transition:all 0.3s ease;
 `
-const MenuItems = styled.ul`
+const MenuItems = styled(motion.ul)`
         position: relative;
         height: 5rem;
         background-color: rgb(32, 32, 32);
@@ -25,7 +26,7 @@ const MenuItems = styled.ul`
         padding: 0px 10rem;
 `
 
-const MenuButton = styled.li`
+const MenuButton = styled(motion.li)`
         background-color: #CED1D2;
         color: #000;
         width:15rem;
@@ -43,7 +44,7 @@ const MenuButton = styled.li`
         left:50%;
         transform:translateX(-50%);
 `
-const MenuItem = styled.li`
+const MenuItem = styled(motion.li)`
         text-transform:uppercase;
         color:#fff;
 `
@@ -54,15 +55,46 @@ const NavBar = () => {
         setMenu(!menu);
     }
     return (
-        <NavbarContainer menu={menu}>
-            <MenuItems>
+        <NavbarContainer menu={menu}
+            initial={{
+                y: '-100%'
+            }}
+            animate={{
+                y: 0,
+            }}
+            transition={{
+                duration: 2,
+                delay: 2,
+            }}
+        >
+            <MenuItems
+                drag='y'
+                dragConstraints={{
+                    top: 0,
+                    bottom: 70,
+                }}
+                dragElastic={0.05}
+                dragSnapToOrigin
+            >
                 <MenuButton onClick={toggleMenu}>
                     Menu
                 </MenuButton>
-                <MenuItem>home</MenuItem>
-                <MenuItem>about</MenuItem>
-                <MenuItem>shop</MenuItem>
-                <MenuItem>new arrival</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, y: 0 }}
+                >home</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, y: 0 }}
+                >about</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, y: 0 }}
+                >shop</MenuItem>
+                <MenuItem
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    whileTap={{ scale: 0.9, y: 0 }}
+                >new arrival</MenuItem>
             </MenuItems>
         </NavbarContainer>
     )
