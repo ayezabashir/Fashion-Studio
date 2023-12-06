@@ -81,15 +81,9 @@ const Video = () => {
                     <motion.h1 variants={item} data-scroll data-scroll-delay='0.04' data-scroll-speed="4" className="fontxxl">h</motion.h1>
                     <motion.h1 variants={item} data-scroll data-scroll-delay='0.03' data-scroll-speed="4" className="fontxxl">i</motion.h1>
                     <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">o</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">n&nbsp;</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">S</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.04' data-scroll-speed="4" className="fontxxl">t</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.03' data-scroll-speed="4" className="fontxxl">u</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.13' data-scroll-speed="4" className="fontxxl">d</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">i</motion.h1>
-                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.06' data-scroll-speed="4" className="fontxxl">o</motion.h1>
+                    <motion.h1 variants={item} data-scroll data-scroll-delay='0.09' data-scroll-speed="4" className="fontxxl">n</motion.h1>
                 </div>
-                <h2 data-scroll data-scroll-delay='0.04' data-scroll-speed="2" className="fontlg">Fashion, Beauty, Culture</h2>
+                <motion.h2 variants={item} data-scroll data-scroll-delay='0.04' data-scroll-speed="2" className="fontlg">Fashion, Beauty, Culture</motion.h2>
             </Title>
             <video src={video} muted loop type='video/mp4' autoPlay />
         </VideoContainer>
