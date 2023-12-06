@@ -10,13 +10,18 @@ const NavbarContainer = styled.div`
         z-index:6;
 `
 const MenuButton = styled.li`
-        backgroundColor: #CED1D2;
-        color: #fff;
+        background-color: #CED1D2;
+        color: #000;
         width:15rem;
         height:2.5rem;
         display:flex;
         justify-content: center;
         align-items:center;
+        text-transform:uppercase;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        font-weight:600;
+        font-size:1rem;
+        cursor:pointer;
 `
 
 const NavBar = () => {
