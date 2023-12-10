@@ -5,6 +5,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css'
 import Home from './pages/home/Home';
 import { AnimatePresence } from 'framer-motion';
 import About from './pages/about/About';
+import Shop from './pages/shop/Shop';
 
 function App() {
   const containerRef = useRef(null);
@@ -28,6 +29,7 @@ function App() {
           <main data-scroll-container ref={containerRef}>
             <Home />
             <About />
+            <Shop />
           </main>
         </AnimatePresence>
       </LocomotiveScrollProvider>
