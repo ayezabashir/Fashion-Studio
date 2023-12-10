@@ -54,8 +54,15 @@ const About = () => {
                 <br /><br />We strive to build on our vision. As a fashion label, we do our best to create amazing experiences for all people. We are always looking to make something that is easy for everyone.
             </LeftSubSec>
             <RightSubSec>
-                <img src={img1} alt="" />
-                <img src={img2} className="small-img1" alt="" />
+                <img
+                    src={img1}
+                    alt="about" />
+                <img
+                    data-scroll
+                    data-scroll-speed="-2"
+                    src={img2}
+                    className="small-img1"
+                    alt="about" />
             </RightSubSec>
         </Section>
     )
