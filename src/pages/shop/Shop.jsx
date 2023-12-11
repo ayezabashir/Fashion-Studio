@@ -39,6 +39,22 @@ const Left = styled.div`
         
 `
 
+const Right = styled.div`
+        position:absolute;
+        left:35%;
+        min-height:100vh;
+        background-color: #BEBEBE;
+        width:65%;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        padding-left:30%;
+        h1{
+            width:5rem;
+            margin: 0 2rem;
+        }
+`
+
 const Shop = () => {
     return (
         <ShopContainer>
@@ -50,6 +66,17 @@ const Shop = () => {
                     We have lots of different clothing options like shoes, jackets and dresses. Not only clothes but we also provide unique Jewellery as well. It is great for us to carry our new clothes all around the country and look different.
                 </p>
             </Left>
+            <Right>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+                <h1>img</h1>
+            </Right>
         </ShopContainer>
     )
 }
